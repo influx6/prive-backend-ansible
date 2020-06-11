@@ -165,3 +165,14 @@ Once done, the necessary `kubeconfig` needed to interact with the cluster
 will be in `./artifacts/master/kubeconfig` directory, which should be copied to `$HOME/.kube/config`.
 
 With that, you are ready to interact with your cluster
+
+## Gotchas
+
+Below are a few gotchas you should be aware of:
+
+#### Packages Unavailable in Ubuntu 20.04 (or destros based on that)
+
+- MySQL WorkBench:
+    To get MySQL Workbench you would need to manually download from https://dev.mysql.com/downloads/workbench/
+
+- Shutter

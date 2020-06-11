@@ -17,17 +17,23 @@
   apt_repository:
     repo: 'ppa:x2go/stable'
     update_cache: yes
-- name: Install pip with python3-pip packages
+- name: Install pip with python3-pip packages (for versions above ubuntu 20.04)
   ignore_errors: yes
   apt:
     pkg:
       - python3-pip
     state: present
-- name: Install pip with python-pip packages
+- name: Install pip with python-pip packages (for versions below ubuntu 20.04)
   ignore_errors: yes
   apt:
     pkg:
       - python-pip
+      - mysql-workbench
+    state: present
+- name: Add shutter apt repository
+  apt_repository:
+    repo: ppa:linuxuprising/shutter
+    update_cache: yes
     state: present
 - name: Install default packages
   apt:
@@ -39,15 +45,14 @@
       - x2goserver
       - x2goserver-xsession
       - x2goclient
+      - shutter
       - ant
-      - mysql-workbench
       - mysql-client
       - vim
       - neovim
       - xrdp
       - libreoffice
       - chromium-browser
-      - shutter
       - meld
       - git
       - htop
