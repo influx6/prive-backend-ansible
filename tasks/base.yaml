@@ -17,11 +17,22 @@
   apt_repository:
     repo: 'ppa:x2go/stable'
     update_cache: yes
+- name: Install pip with python3-pip packages
+  ignore_errors: yes
+  apt:
+    pkg:
+      - python3-pip
+    state: present
+- name: Install pip with python-pip packages
+  ignore_errors: yes
+  apt:
+    pkg:
+      - python-pip
+    state: present
 - name: Install default packages
   apt:
     pkg:
       - git
-      - python-pip
       - build-essential
       - snapd
       - curl

@@ -1,4 +1,4 @@
-user ?= ubuntu
+user ?= ${USER}
 play ?= dev.yaml
 inventory ?= inventories/vm.yaml
 
