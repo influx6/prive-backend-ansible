@@ -283,3 +283,4 @@ cython_debug/
 multipass_vm_inventory.yaml
 kubeconfig
 artifacts
+tmp

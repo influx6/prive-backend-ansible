@@ -53,6 +53,8 @@
       - xrdp
       - libreoffice
       - chromium-browser
+      - unzip
+      - tar
       - meld
       - git
       - htop
