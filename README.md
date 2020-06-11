@@ -175,4 +175,3 @@ Below are a few gotchas you should be aware of:
 - MySQL WorkBench:
     To get MySQL Workbench you would need to manually download from https://dev.mysql.com/downloads/workbench/
 
-- Shutter
